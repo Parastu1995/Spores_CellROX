@@ -25,3 +25,27 @@ The pipeline has been developed and tested on:
 #### macrophages:
 - RAW macrophages
 - Human monocyte-derived macrophages (hMDMs)
+
+## Analysis Workflow
+1. Load microscopy images and macrophage segmentation masks.
+2. Identify individual macrophages using the provided labeled segmentation.
+3. Binarize the fungal spore channel and applied watershed to resolve overlapping structures.
+4. Binarize the CellROX channel.
+5. Measure overlap between engulfed fungal spores and CellROX signal.
+6. Calculate the intensity-based colocalization metrics.
+
+## Outputs
+The pipeline generates:
+- Intensity-based Colocalization ratio per macrophage
+- Intensity-based Colocalization ratio per fungal spore
+
+## Software and Packages
+The analysis was developed in Python using:
+- NumPy
+- Pandas
+- SciPy
+- scikit-image
+- Matplotlib
+- Seaborn
+- czifile
+- scikit-posthocs
