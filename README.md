@@ -4,6 +4,8 @@
 
 This pipeline quantifies the association between oxidative stress signals and fungal spores in fluorescence microscopy images through intensity-based colocalization analyses. The workflow combines macrophage segmentation masks generated using Cellpose with image-based analysis of CellROX and fungal spore channels to calculate colocalization metrics at both the macrophage and fungal spore levels.
 
+![Analysis Workflow](Analysis%20workflow.PNG)
+
 ## Microscopy Data Structure
 The pipeline expects three-channel microscopy images with the following channel order:
 | Channel | Description |
